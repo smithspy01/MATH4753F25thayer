@@ -56,4 +56,9 @@ birthday <- function(k) {
 }
 ```
 
+# Testing function
+
+```{r}
+birthday(20:25)
+```
 
