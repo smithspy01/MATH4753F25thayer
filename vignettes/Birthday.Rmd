@@ -1,0 +1,59 @@
+---
+title: "Birthday"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Birthday}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Proof
+
+\[
+\text{Total assignments: } 365^n
+\]
+
+
+
+
+\[
+\text{Distinct-birthday assignments: } 365 \cdot 364 \cdot \cdots \cdot (365 - n + 1) \;=\; \frac{365!}{(365 - n)!}
+\]
+
+
+
+
+\[
+P(\bar{A}) \;=\; \frac{365 \cdot 364 \cdot \cdots \cdot (365 - n + 1)}{365^n}
+\;=\; \frac{365!}{(365 - n)! \, 365^n}
+\]
+
+
+
+
+\[
+P(A) \;=\; 1 - P(\bar{A}) \;=\; 1 - \frac{365!}{(365 - n)! \, 365^n}
+\]
+
+# Program with lchoose and lfactorial
+
+```{r}
+# Probability of at least one shared birthday using logs
+birthday <- function(k) {
+    
+    # log P(distinct) = log(n!) + log(choose(365, n)) - n*log(365)
+    prob <- lfactorial(k) + lchoose(365, k) - k * log(365)
+    
+    probd <- exp(prob)
+    1 - probd  # P(A) = 1 - P(distinct)
+}
+```
+
+
