@@ -27,4 +27,4 @@ mybin = function(iter = 100,n = 10, p = 0.5){
   barplot(succ.tab/(iter), col = grDevices::rainbow(n+1), main = "Binomial simulation", xlab="Number of successes")
   succ.tab/iter
 }
-mybin(iter = 1000,n = 18, p = 0.3)
+
