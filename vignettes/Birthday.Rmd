@@ -45,14 +45,8 @@ P(A) \;=\; 1 - P(\bar{A}) \;=\; 1 - \frac{365!}{(365 - n)! \, 365^n}
 # Program with lchoose and lfactorial
 
 ```{r}
-# Probability of at least one shared birthday using logs
-birthday <- function(k) {
-    
-    # log P(distinct) = log(n!) + log(choose(365, n)) - n*log(365)
-    prob <- lfactorial(k) + lchoose(365, k) - k * log(365)
-    
-    probd <- exp(prob)
-    1 - probd  # P(A) = 1 - P(distinct)
+birthday <- function(n) {
+  1 - exp(lchoose(365, n) + lfactorial(n) - n * log(365))
 }
 ```
 
