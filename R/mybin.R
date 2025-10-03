@@ -8,7 +8,7 @@
 #' @export
 #'
 #' @examples
-#' mybin(iter = 1000,n = 18, p = 0.3)
+#' mybin()
 mybin = function(iter = 100,n = 10, p = 0.5){
   # make a matrix to hold the samples
   #initially filled with NA's
@@ -24,7 +24,7 @@ mybin = function(iter = 100,n = 10, p = 0.5){
   #Make a table of successes
   succ.tab = table(factor(succ,levels=0:n))
   #Make a barplot of the proportions
-  barplot(succ.tab/(iter), col = rainbow(n+1), main = "Binomial simulation", xlab="Number of successes")
+  barplot(succ.tab/(iter), col = grDevices::rainbow(n+1), main = "Binomial simulation", xlab="Number of successes")
   succ.tab/iter
 }
 mybin(iter = 1000,n = 18, p = 0.3)

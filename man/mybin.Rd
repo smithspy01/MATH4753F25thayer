@@ -20,5 +20,5 @@ a barplot
 mybin
 }
 \examples{
-mybin(iter = 1000,n = 18, p = 0.3)
+mybin()
 }
