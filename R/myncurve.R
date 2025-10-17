@@ -4,7 +4,7 @@
 #' @param sigma standard deviation
 #' @param a area under the curve
 #'
-#' @returns
+#' @returns a list with mu, sigma, and probability of a
 #' @export
 #'
 #' @examples
