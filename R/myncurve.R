@@ -13,7 +13,7 @@
 myncurve <- function(mu, sigma, a) {
   curve(dnorm(x, mean = mu, sd = sigma),
         xlim = c(mu - 3 * sigma, mu + 3 * sigma),
-        main = paste("P(X ≤", a, ")"),
+        main = paste("P(X <=", a, ")"),
         ylab = "Density")
 
   x_vals <- seq(mu - 3 * sigma, a, length = 1000)
