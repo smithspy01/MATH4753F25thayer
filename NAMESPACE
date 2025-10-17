@@ -3,6 +3,7 @@
 export(birthday)
 export(mybin)
 export(myfirstfunction)
+export(myncurve)
 export(mysum)
 export(scatterhist)
 importFrom(graphics,barplot)
