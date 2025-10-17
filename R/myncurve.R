@@ -1,4 +1,4 @@
-#' myncurve
+#' List
 #'
 #' @param mu mean
 #' @param sigma standard deviation
