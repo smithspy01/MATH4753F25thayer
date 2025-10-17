@@ -2,13 +2,13 @@
 #'
 #' @param mu mean
 #' @param sigma standard deviation
-#' @param a area under the curve
+#' @param a area under the curve of which is shaded up to
 #'
 #' @returns a list with mu, sigma, and probability of a
 #' @export
 #'
 #' @examples
-#' myncurve()
+#' myncurve(mu = 10, sigma = 5, a = 6)
 
 myncurve <- function(mu, sigma, a) {
   curve(dnorm(x, mean = mu, sd = sigma),
