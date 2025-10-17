@@ -8,7 +8,7 @@
 #' @export
 #'
 #' @examples
-#' myncurve(mu=10,sigma=5, a=6)
+#' myncurve()
 
 myncurve <- function(mu, sigma, a) {
   curve(dnorm(x, mean = mu, sd = sigma),
