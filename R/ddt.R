@@ -6,6 +6,7 @@
 #' \describe{
 #'   \item{SPECIES}{Fish species}
 #'   \item{RIVER}{Name of the river}
+#'   \item{MILE}{How far down river}
 #'   \item{DDT}{Concentration of DDT [ppm]}
 #'   \item{LENGTH}{Length of the fish [cm]}
 #'   \item{WEIGHT}{Weight of the fish [g]}
