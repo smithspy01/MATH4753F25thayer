@@ -11,13 +11,13 @@
 #' @examples
 #' mycltu(n=1,iter=10000)
 mycltu = function(n,iter,a=0,b=10){
-
+  x = NULL
   ## r-random sample from the uniform
-  y=runif(n*iter,a,b)
+  y=stats::runif(n*iter,a,b)
 
   ## Place these numbers into a matrix
   ## The columns will correspond to the iteration and the rows will equal the sample size n
-  data=matrix(y,nr=n,nc=iter,byrow=TRUE)
+  data=matrix(y,nrow=n,ncol=iter,byrow=TRUE)
 
   ## apply the function mean to the columns (2) of the matrix
   ## these are placed in a vector w
@@ -39,12 +39,12 @@ mycltu = function(n,iter,a=0,b=10){
                                                  "\n", "sample size= ",n,sep=""),xlab="Sample mean")
 
   ## add a density curve made from the sample distribution
-  lines(density(w),col="Blue",lwd=3) # add a density plot
+  graphics::lines(stats::density(w),col="Blue",lwd=3) # add a density plot
 
   ## Add a theoretical normal curve
-  curve(dnorm(x,mean=(a+b)/2,sd=(b-a)/(sqrt(12*n))),add=TRUE,col="Red",lty=2,lwd=3) # add a theoretical curve
+  graphics::curve(stats::dnorm(x,mean=(a+b)/2,sd=(b-a)/(sqrt(12*n))),add=TRUE,col="Red",lty=2,lwd=3) # add a theoretical curve
 
   ## Add the density from which the samples were taken
-  curve(dunif(x,a,b),add=TRUE,lwd=4)
+  graphics::curve(stats::dunif(x,a,b),add=TRUE,lwd=4)
 
 }

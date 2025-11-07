@@ -2,6 +2,7 @@
 
 export(birthday)
 export(mybin)
+export(mycltu)
 export(myfirstfunction)
 export(myncurve)
 export(mysum)
