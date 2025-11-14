@@ -11,12 +11,7 @@
 #' @export
 #'
 #' @examples
-#' #' \dontrun{
-#'   data(ddt, package="MATH4753F25thayer")
-#'   obj <- myboot2(x = ddt$DDT, fun="mean")
-#'   obj$ci
-#' }
-#'
+#' myboot2(iter=5000, x=data, fun="mean", alpha=0.05)
 myboot2<-function(iter=10000,x,fun="mean",alpha=0.05,cx=1.5,...){  #Notice where the ... is repeated in the code
   n=length(x)   #sample size
 

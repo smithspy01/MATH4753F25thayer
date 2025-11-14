@@ -26,10 +26,5 @@ A list
 Bootstrapping
 }
 \examples{
-#' \dontrun{
-  data(ddt, package="MATH4753F25thayer")
-  obj <- myboot2(x = ddt$DDT, fun="mean")
-  obj$ci
-}
-
+myboot2(iter=5000, x=data, fun="mean", alpha=0.05)
 }
