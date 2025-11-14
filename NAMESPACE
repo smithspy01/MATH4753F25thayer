@@ -2,6 +2,7 @@
 
 export(birthday)
 export(mybin)
+export(myboot2)
 export(mycltu)
 export(myfirstfunction)
 export(myncurve)
